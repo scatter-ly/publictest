@@ -5,8 +5,8 @@ metadata:
   title: OpenContext Website
   description: An example of a website context
   links:
-    - title: Website
-      url: http://opencontext.com
+    - title: Docs site
+      url: https://docs.opencontext.com
   annotations:
     github.com/project-slug: opencontextinc-test/publictest
 spec:
