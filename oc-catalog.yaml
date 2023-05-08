@@ -1,18 +1,18 @@
 apiVersion: opencontext.com/v1alpha1
 kind: CodeComponent
 metadata:
-  name: opencontext-website
-  title: OpenContext Website
+  name: scatterly-website
+  title: Scatter-ly Website
   description: An example of a website context
   links:
     - title: Docs site
       url: https://docs.opencontext.com
   annotations:
-    github.com/project-slug: opencontextinc-test/publictest
+    github.com/project-slug: scatter-ly/publictest
 spec:
   type: other
   otherType: website
   lifecycle: production
-  owner: [opencontextinc-test/dev-core]
-  uri: https://opencontext.com
+  owner: [scatter-ly/docs-core]
+  uri: https://docs.opencontext.com
   
