@@ -1,18 +1,24 @@
 apiVersion: opencontext.com/v1alpha1
-kind: CodeComponent
+kind: CodeComponentSidecar
 metadata:
-  name: scatterly-website
-  title: Scatter-ly Website
-  description: An example of a website context
-  links:
-    - title: Docs site
-      url: https://docs.opencontext.com
-  annotations:
-    github.com/project-slug: scatter-ly/publictest
+  namespace: scatter-ly
+  name: publictest-extras
 spec:
-  type: other
-  otherType: website
+  codecomponent: scatter-ly/publictest
+  lifecycle: test
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  namespace: scatter-ly
+  name: publictest-service-ownership
+  title: Public Test App Service Ownership
+  description: Publict Test Service Ownership documentation
+  tags:
+    - docs
+spec:
+  type: document
   lifecycle: production
-  owner: [scatter-ly/docs-core]
-  uri: https://docs.opencontext.com
-  
+  owner: [scatter-ly/eng-raccoon]
+  uri: https://www.notion.so/opencontext/Retail-App-Service-Ownership-Doc-6361695aea6f443ab78ad49926258f21
+  dependsOn: [code-component:scatter-ly/publictest]
