@@ -1,13 +1,4 @@
 apiVersion: opencontext.com/v1alpha1
-kind: CodeComponentSidecar
-metadata:
-  namespace: scatter-ly
-  name: publictest-extras
-spec:
-  codecomponent: scatter-ly/publictest
-  lifecycle: test
----
-apiVersion: opencontext.com/v1alpha1
 kind: AuxComponent
 metadata:
   namespace: scatter-ly
